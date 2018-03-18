@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="StudySpringMVCSample:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/StudySpringMVCSample_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="StudySpringMVCSample/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="StudySpringMVCSample" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Spring-4.3.14.RELEASE" />
+          <element id="library" level="project" name="Spring MVC-4.3.14.RELEASE" />
+          <element id="library" level="project" name="Hibernate 5.2.12-5.2.12" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.45-bin" />
+          <element id="library" level="project" name="jaxb-api-2.3.0" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

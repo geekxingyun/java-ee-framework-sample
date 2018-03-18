@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!-- 本配置文件是为名称叫做Dispatcher 的DispatcherServlet 使用,提供相关Spring MVC 配置-->
+    <!---激活Spring 基于 annotatin 的DI,是用户可疑在SPring MVC 中使用Spring的强大功能
+    激活 @Required, @Autowrited,JSR 250's @PostConstruct, @ PreDestroy and @Resource 等标注 -->
+    <context:annotation-config/>
+
+    <!-- DispatcherServlet 上下文，只管理@Controller 类型的bean,忽略其他类型的bean，比如@service -->
+    <context:component-scan base-package="com.xingyun.controller">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <!--扩充了注解驱动，可以将请求参数绑定到控制器参数-->
+    <mvc:annotation-driven/>
+
+    <!--静态资源处理  css js img-->
+    <mvc:resources mapping="/resources/**" location="/resources/"/>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/views/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+
+</beans>
