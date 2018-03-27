@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context.xsd 
+	http://www.springframework.org/schema/mvc 
+	http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!-- 启用Spring基于annotation的DI,使用户可以在Spring MVC 中使用Spring的强大功能
+                  激活@Requried @Autowired,JSR 250's @PostConstruct @PreDestroy and @Resource 等标注
+     -->
+    <context:annotation-config />
+    
+    <!-- DispatcherServlet 上下文,只管理@Controller类型的Bean 忽略其他类型的Bean 如@Service -->
+    <context:component-scan base-package="com.xingyun.controllers">
+       <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+    
+
+    
+
+</beans>
