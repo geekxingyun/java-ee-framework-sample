@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+	<!-- The Convention can automatically reload configuration changesThis feature,it is strongly advised not to use it in production environments. -->
+	<constant name="struts.convention.classes.reload" value="true" />
+
+
+	<!-- 设置Convention插件定位视图资源的根路径。默认值为/WEB-INF/content/ -->
+	<constant name="struts.convention.result.path" value="/WEB-INF/views/" />
+	<!-- Convention插件会首先根据名字叫做 struts, struts2, action or actions搜索找到根包 -->
+	<constant name="struts.convention.package.locators"
+		value="action,actions,struts,struts2,controllers,controller" />
+	<!-- 然后匹配实现了 com.opensymphony.xwork2.Action接口的类 或者搜索文件名后缀为该value的文件 默认值：Action -->
+	<constant name="struts.convention.action.suffix" value="Controller" />		
+	<!-- Default parent package for action mappins ,default is convention-default ||rest-default-->
+	<constant name="struts.convention.default.parent.package" value="convention-default" />	
+		
+	<!-- Create action mappings, even if no @Action is found ,默认为false -->
+	<constant name="struts.convention.action.mapAllMatches" value="true" />
+	<!-- 如果为true则表示JSP文件可以直接放到Action对应的包下面而不再需要放到 WEB-INF目录下 -->
+	<constant name="struts.convention.result.flatLayout" value="true" />
+	<!-- 告诉插件忽略这些包,不受convention约束 You can tell the Convention to ignore certain 
+		packages using the property struts.convention.exclude.packages -->
+	<constant name="struts.convention.exclude.packages"
+		value="org.apache.struts.*,org.apache.struts2.*,org.springframework.web.struts.*,org.springframework.web.struts2.*,org.hibernate.*" />
+   
+	
+    <!-- Disable the scanning of packages based on package locators ,default 
+		is false -->
+	<constant name="struts.convention.package.locators.disable"
+		value="false" />
+	<!-- If set, only packages that start with its value will be scanned for 
+		actions -->
+	<constant name="struts.convention.package.locators.basePackage"
+		value="" />
+	<!-- default is false,Scan packages for actions ,default Create action mappings, 
+		even if no @Action is found -->
+	<constant name="struts.convention.action.disableScanning"
+		value="false" />
+	<!-- Check if an action implements com.opensymphony.xwork2.Action to create 
+		an action mapping -->
+	<constant name="struts.convention.action.checkImplementsAction"
+		value="true" />
+	<!-- Convert action name to lower case -->
+	<constant name="struts.convention.action.name.lowercase"
+		value="true" />
+	<!-- Action分割符 Separator used to build the action name, MyAction -> my-action. 
+		This character is also used as the separator between the action name and 
+		the result in templates, like action-result.jsp -->
+	<constant name="struts.convention.action.name.separator"
+		value="-" />
+	<!-- Disable the scanning of packages based on package locators ,default 
+		is false -->
+	<constant name="struts.convention.package.locators.disable"
+		value="false" />
+	<!-- If set, only packages that start with its value will be scanned for 
+		actions -->
+	<constant name="struts.convention.package.locators.basePackage"
+		value="" />
+	<!-- The list of result types that can have locations that are relative 
+		and the result location (which is the resultPath plus the namespace) prepended 
+		to them -->
+	<constant name="struts.convention.relative.result.types"
+		value="dispatcher,velocity,freemarker" />
+	<!-- A boolean parameter that controls whether or not this will handle unknown 
+		actions in the same manner as Apache, Tomcat and other web servers. This 
+		handling will send back a redirect for URLs such as /foo to /foo/ if there 
+		doesn't exist an action that responds to /foo default is true -->
+	<constant name="struts.convention.redirect.to.slash" value="true" />
+	<!-- Set to false, to prevent Convention from creating a default mapping 
+		to "execute" when there are other methods annotated as actions in the class 
+		default is true -->
+	<constant name="struts.convention.action.alwaysMapExecute"
+		value="true" />
+	<!-- <constant name="struts.convention.action.includeJars" /> -->
+	<!-- Comma separated list of regular expressions of jar URLs to be scanned. 
+		eg. ".myJar-0\.2.,.thirdparty-0\.1." -->
+	<constant name="struts.convention.action.fileProtocols" value="jar" />
+	<!-- When using this plugin with JBoss, you need to set the following constants: -->
+	<constant name="struts.convention.exclude.parentClassLoader"
+		value="true" />
+</struts>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+
+	<package name="default" namespace="/" extends="struts-default">
+
+        <!--配置默认启动的action -->
+		<default-action-ref name="index" />
+		<action name="index" class="actions.IndexAction">
+		  <result>/WEB-INF/views/index.jsp</result>
+		</action>
+		
+		<!-- Base Usage -->
+		<action name="test" class="actions.test.TestAction">
+			 <result type="freemarker">/WEB-INF/ftl/test.ftl</result>
+		</action>
+		
+		<!-- Login Demo -->
+		<!-- 跳转到登陆页面 -->
+		<action name="jumpLogin" class="actions.login.JumpLoginAction">
+		   <result type="freemarker">/WEB-INF/ftl/login.ftl</result>
+		</action>
+	    <!-- 登陆验证 -->
+		<action name="LoginValidate" class="actions.login.LoginValidateAction">
+			 <result name="success" type="freemarker">/WEB-INF/ftl/showinfo.ftl</result>
+			 <result name="error" type="freemarker">/WEB-INF/ftl/login.ftl</result>
+		</action>
+		 
+
+        
+        <action name="standardTags" class="actions.freemarker.StandardTagsAction">
+            <result type="freemarker">/WEB-INF/ftl/standardTags.ftl</result>
+        </action>
+
+	</package>
+</struts>

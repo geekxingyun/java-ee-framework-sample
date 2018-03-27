@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Appenders>
+		<Console name="STDOUT" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d %-5p [%t] %C{2} (%F:%L) - %m%n" />
+		</Console>
+		<File name="MyFile" fileName="${log4j:configParentLocation}/logs/${date:yyyy-MM-dd}-application.log">
+			<PatternLayout>
+				<Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+			</PatternLayout>
+		</File>
+	</Appenders>
+	<Loggers>
+		<Logger name="com.opensymphony.xwork2" level="info" />
+		<Logger name="org.apache.struts2" level="info" />
+		<Logger name="org.apache" level="error" />
+		<Root level="info">
+			<AppenderRef ref="STDOUT" />
+			<AppenderRef ref="MyFile" />
+		</Root>
+	</Loggers>
+</Configuration>
