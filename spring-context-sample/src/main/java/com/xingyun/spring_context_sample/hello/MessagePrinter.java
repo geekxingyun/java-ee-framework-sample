@@ -1,11 +1,10 @@
-package hello;
+package com.xingyun.spring_context_sample.hello;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class MessagePrinter {
-
 	final private MessageService service;
 
     @Autowired
