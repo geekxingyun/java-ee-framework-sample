@@ -6,4 +6,4 @@
 
 3. JavaDesignPatternSample: Java设计模式案例源码
 
-   -------FactoryPatternSample : Java设计模式之工厂模式案例源码
+   -------[FactoryPatternSample](https://github.com/geekxingyun/JavaEE-Framework-Sample/tree/master/JavaDesignPatternSample/FactoryPatternSample) : Java设计模式之工厂模式案例源码
