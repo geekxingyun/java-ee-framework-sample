@@ -6,4 +6,4 @@
 
 3. JavaDesignPatternSample -----Java 设计模式案例源码
 
-5. JavaDesignPatternSample/FactoryPatternSample 工厂模式案例源码
+5. JavaDesignPatternSample/FactoryPatternSample Java工厂模式案例源码
