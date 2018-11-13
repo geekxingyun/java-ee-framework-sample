@@ -5,4 +5,5 @@
 2. Spring-MVC-Sample:  Spring MVC 使用案例源码
 
 3. JavaDesignPatternSample -----Java 设计模式案例源码
-                           /FactoryPatternSample 工厂模式案例源码
+
+5. JavaDesignPatternSample/FactoryPatternSample 工厂模式案例源码
