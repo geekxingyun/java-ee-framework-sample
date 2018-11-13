@@ -1,3 +1,5 @@
+# 基于5.1.2.RELEASE 测试通过代码
+
 #### 1. NoFactoryPatternSample    无工厂模式时候的调用方式
 
 #### 2. CodeFactoryPatternSample  手写一个工厂时候的调用方式
