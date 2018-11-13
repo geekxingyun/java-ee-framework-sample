@@ -1,4 +1,4 @@
-# 基于5.1.2.RELEASE 测试通过代码
+# 基于Spring Framework 5.1.2.RELEASE 测试通过代码
 
 #### 1. NoFactoryPatternSample    无工厂模式时候的调用方式
 
