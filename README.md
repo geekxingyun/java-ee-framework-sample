@@ -5,8 +5,6 @@
 
 如果你有什么想学的技术，可以提一个issue,有时间后我会写好Demo 给你放上去。
 
-交流即分享，分享才能进步~
-
 项目源码名称 |项目简介 
 ---|---
 JavaDesignPatternSample | Java 设计模式案例源码
@@ -25,7 +23,7 @@ SpringBoot-Sample | Spring Boot 案例源码
 SpringMVC-Sample  | Spring MVC 案例源码
 Struts2-Sample    | Struts2 案例源码
 
-关于我
+# 关于我
 
 ```
 星云个人主页: http://www.520geek.cn/about/
