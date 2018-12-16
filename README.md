@@ -1,6 +1,22 @@
 
 大家好，我是该项目作者：星云
 
+```
+星云个人主页: http://www.520geek.cn/about/
+
+星云CSDN博客：https://blog.csdn.net/hadues
+
+星云博客园：http://www.cnblogs.com/xingyunblog
+
+星云阿里云栖博客：https://yq.aliyun.com/u/xingyunsky
+
+星云GitHub: https://github.com/geekxingyun
+
+星云微博：https://weibo.com/xingyunsky
+
+联系方式：fairy_xingyun@hotmail.com   
+
+```
 这个仓库是关于JavaEE 框架的案例代码合集,可供大家参考学习~
 
 如果你有什么想学的技术，可以提一个issue,有时间后我会写好Demo 给你放上去。
