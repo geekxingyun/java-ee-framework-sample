@@ -12,6 +12,7 @@
 JavaDesignPatternSample | Java 设计模式案例源码
 lucene-sample| Lucene 搜索引擎案例源码
 Maven_Sample|Maven 项目基本模板案例源码
+RabbitMQ_Sample|RabbitMQ 案例源码
 Spring-Build-Restful-Web-Service-Sample|Spring 创建一个Web Service 案例源码
 Spring-Consume-Restful-Web-Service-Sample|Spring 消费一个Web Service 案例源码
 spring-context-sample|Spring 上下文案例源码
