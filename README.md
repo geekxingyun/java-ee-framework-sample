@@ -43,3 +43,9 @@ Struts2-Sample    | Struts2 案例源码
 联系方式：fairy_xingyun@hotmail.com   
 
 ```
+> 交流即分享，分享才能进步！不对之处，还请各位前辈多多指教。  by 星云
+
+<h2>感谢赞赏，微信二维码</h2>
+<p><img src="https://img2018.cnblogs.com/blog/622489/201812/622489-20181215164147325-217176189.png" alt="" width="303" height="282"></p>
+<h2>感谢赞赏，支付宝二维码</h2>
+<p><img src="https://img2018.cnblogs.com/blog/622489/201812/622489-20181215164420863-364321980.png" alt="" width="297" height="303"></p>
