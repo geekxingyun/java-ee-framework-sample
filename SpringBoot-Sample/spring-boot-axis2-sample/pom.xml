@@ -3,12 +3,6 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.2.RELEASE</version>
-		<relativePath /> <!-- lookup parent from repository -->
-	</parent>
 	<groupId>com.xingyun</groupId>
 	<artifactId>spring-boot-axis2-sample</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -16,49 +10,748 @@
 	<name>spring-boot-axis2-sample</name>
 	<description>Axis2 project for Spring Boot</description>
 
-	<properties>
-		<java.version>1.8</java.version>
-	</properties>
+	<!-- 该项目支持Tomcat 7.0 + JDK1.8+ -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.2.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
 
 	<dependencies>
+		<!-- Spring Web 模块 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
-        <!-- Tomcat Servlet API  -->
+		<!-- 编译JSP -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		 <!--用于编译jsp-->
-        <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-jasper</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        
-        <!-- Spring Boot Test -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<!-- Axis2 Framework start -->
+		<!-- activation-1.1.jar -->
+		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>activation</artifactId>
+			<version>${activation.version}</version>
+		</dependency>
+
+		<!-- antlr-2.7.7.jar https://mvnrepository.com/artifact/antlr/antlr -->
+		<dependency>
+			<groupId>antlr</groupId>
+			<artifactId>antlr</artifactId>
+		</dependency>
+
+		<!-- apache-mime4j-core-0.7.2 https://mvnrepository.com/artifact/org.apache.james/apache-mime4j-core -->
+		<dependency>
+			<groupId>org.apache.james</groupId>
+			<artifactId>apache-mime4j-core</artifactId>
+			<version>${apache.mime4j.core.version}</version>
+		</dependency>
+
+		<!-- axiom axiom-api-1.2.21.jar -->
+		<dependency>
+			<groupId>org.apache.ws.commons.axiom</groupId>
+			<artifactId>axiom-api</artifactId>
+			<version>${axiom.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>*</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- axiom-dom-1.2.21.jar -->
+		<dependency>
+			<groupId>org.apache.ws.commons.axiom</groupId>
+			<artifactId>axiom-dom</artifactId>
+			<version>${axiom.version}</version>
+		</dependency>
+
+		<!-- axiom-impl-1.2.21.jar -->
+		<dependency>
+			<groupId>org.apache.ws.commons.axiom</groupId>
+			<artifactId>axiom-impl</artifactId>
+			<version>${axiom.version}</version>
+		</dependency>
+
+		<!-- axiom-jaxb-1.2.21.jar -->
+		<dependency>
+			<groupId>org.apache.ws.commons.axiom</groupId>
+			<artifactId>axiom-jaxb</artifactId>
+			<version>${axiom.version}</version>
+		</dependency>
+
+		<!-- axis2 axiom-adb-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-adb</artifactId>
+			<version>${axis2.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>*</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- axis2-clustering-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-clustering</artifactId>
+			<version>${axis2.version}</version>
+		</dependency>
+
+		<!-- axis2-codegen-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-codegen</artifactId>
+			<version>${axis2.version}</version>
+		</dependency>
+
+		<!-- axis2-corba-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-corba</artifactId>
+			<version>${axis2.version}</version>
+		</dependency>
+
+		<!-- axis2-fastinfoset-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-fastinfoset</artifactId>
+			<version>${axis2.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>*</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- axis2-jaxbri-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-jaxbri</artifactId>
+			<version>${axis2.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>*</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- axis2-jaxws-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-jaxws</artifactId>
+			<version>${axis2.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>*</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- axis2-jibx-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-jibx</artifactId>
+			<version>${axis2.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.jibx</groupId>
+					<artifactId>jibx-bind</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.google.code.findbugs</groupId>
+					<artifactId>bcel-findbugs</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- axis2-json-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-json</artifactId>
+			<version>${axis2.version}</version>
+		</dependency>
+
+		<!-- axis2-kernel-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-kernel</artifactId>
+			<version>${axis2.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.servlet</groupId>
+					<artifactId>servlet-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- axis2-metadata-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-metadata</artifactId>
+			<version>${axis2.version}</version>
+		</dependency>
+
+		<!-- axis2-mtompolicy-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-mtompolicy</artifactId>
+			<version>${axis2.version}</version>
+		</dependency>
+
+		<!-- axis2-saaj-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-saaj</artifactId>
+			<version>${axis2.version}</version>
+		</dependency>
+
+		<!-- axis2-soapmonitor-servlet-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-soapmonitor-servlet</artifactId>
+			<version>${axis2.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>*</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- axis2-spring-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-spring</artifactId>
+			<version>${axis2.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-beans</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-context</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- axis2-transport-base-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-transport-base</artifactId>
+			<version>${axis2.version}</version>
+		</dependency>
+
+		<!-- axis2-transport-http-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-transport-http</artifactId>
+			<version>${axis2.version}</version>
+		</dependency>
+
+		<!-- axis2-transport-jms-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-transport-jms</artifactId>
+			<version>${axis2.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.geronimo.specs</groupId>
+					<artifactId>geronimo-jms_1.1_spec</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.geronimo.specs</groupId>
+					<artifactId>geronimo-jta_1.0.1B_spec</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- axis2-transport-local-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-transport-local</artifactId>
+			<version>${axis2.version}</version>
+		</dependency>
+
+		<!-- axis2-transport-mail-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-transport-mail</artifactId>
+			<version>${axis2.version}</version>
+		</dependency>
+
+		<!-- axis2-transport-tcp-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-transport-tcp</artifactId>
+			<version>${axis2.version}</version>
+		</dependency>
+
+		<!-- axis2-transport-udp-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-transport-udp</artifactId>
+			<version>${axis2.version}</version>
+		</dependency>
+
+		<!-- axis2-transport-xmpp-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-transport-xmpp</artifactId>
+			<version>${axis2.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jivesoftware</groupId>
+					<artifactId>smack</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>jivesoftware</groupId>
+					<artifactId>smackx</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>commons-lang</groupId>
+					<artifactId>commons-lang</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- axis2-xmlbeans-1.7.9.jar -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-xmlbeans</artifactId>
+			<version>${axis2.version}</version>
+		</dependency>
+
+		<!-- Common Codec commons-codec-1.2.jar https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+		</dependency>
+
+		<!-- commons-fileupload-1.3.3.jar https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>${commons.fileupload.version}</version>
+		</dependency>
+
+		<!-- commons-httpclient-3.1.jar https://mvnrepository.com/artifact/commons-httpclient/commons-httpclient -->
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>${commons.httpclient.version}</version>
+		</dependency>
+
+		<!-- commons-io-2.1.jar https://mvnrepository.com/artifact/commons-io/commons-io -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons.io.version}</version>
+		</dependency>
+
+		<!-- commons-logging-1.1.1.jar https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>${commons.logging.version}</version>
+		</dependency>
+
+		<!-- geronimo-annotation_1.0_spec-1.1.jar https://mvnrepository.com/artifact/org.apache.geronimo.specs/geronimo-annotation_1.0_spec -->
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-annotation_1.0_spec</artifactId>
+			<version>${geronimo.annotation.1.0.spec.version}</version>
+		</dependency>
+
+		<!-- geronimo-jaxws_2.2_spec-1.0.jar https://mvnrepository.com/artifact/org.apache.geronimo.specs/geronimo-jaxws_2.2_spec -->
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-jaxws_2.2_spec</artifactId>
+			<version>${geronimo.jaxws.2.2.spec.version}</version>
+		</dependency>
+
+		<!-- geronimo-jta_1.1_spec-1.1.jar https://mvnrepository.com/artifact/org.apache.geronimo.specs/geronimo-jta_1.1_spec -->
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-jta_1.1_spec</artifactId>
+			<version>${geronimo.jta.1.1.spec.version}</version>
+		</dependency>
+
+		<!-- geronimo-saaj_1.3_spec-1.0.1.jar https://mvnrepository.com/artifact/org.apache.geronimo.specs/geronimo-saaj_1.3_spec -->
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-saaj_1.3_spec</artifactId>
+			<version>${org.apache.geronimo.specs.version}</version>
+		</dependency>
+
+		<!-- geronimo-stax-api_1.0_spec-1.0.1.jar https://mvnrepository.com/artifact/org.apache.geronimo.specs/geronimo-stax-api_1.0_spec -->
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-stax-api_1.0_spec</artifactId>
+			<version>${org.apache.geronimo.specs.version}</version>
+		</dependency>
+
+		<!-- geronimo-ws-metadata_2.0_spec-1.1.2.jar https://mvnrepository.com/artifact/org.apache.geronimo.specs/geronimo-ws-metadata_2.0_spec -->
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-ws-metadata_2.0_spec</artifactId>
+			<version>${geronimo.ws.metadata.2.0.spec.version}</version>
+		</dependency>
+
+		<!-- gson-2.1.jar https://mvnrepository.com/artifact/com.google.code.gson/gson -->
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
 		</dependency>
 
+		<!-- httpclient-4.5.3.jar https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
 		</dependency>
 
+		<!-- httpcore-4.4.6.jar https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpcore</artifactId>
+		</dependency>
+
+		<!-- jaxb-api-2.2.6.jar https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+		</dependency>
+
+		<!-- jaxb-impl-2.2.6.jar https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-impl -->
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-impl</artifactId>
+			<version>${com.sun.xml.bind.version}</version>
+		</dependency>
+		<!-- jaxb-xjc-2.2.6.jar https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-xjc -->
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-xjc</artifactId>
+			<version>${com.sun.xml.bind.version}</version>
+		</dependency>
+
+		<!-- jaxen-1.1.6.jar https://mvnrepository.com/artifact/jaxen/jaxen -->
+		<dependency>
+			<groupId>jaxen</groupId>
+			<artifactId>jaxen</artifactId>
+		</dependency>
+
+		<!-- jaxws-tools-2.2.6.jar https://mvnrepository.com/artifact/com.sun.xml.ws/jaxws-tools -->
+		<dependency>
+			<groupId>com.sun.xml.ws</groupId>
+			<artifactId>jaxws-tools</artifactId>
+			<version>${com.sun.xml.bind.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.sun.xml.ws</groupId>
+					<artifactId>jaxws-rt</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- jettison-1.3.8.jar https://mvnrepository.com/artifact/org.codehaus.jettison/jettison -->
+		<dependency>
+			<groupId>org.codehaus.jettison</groupId>
+			<artifactId>jettison</artifactId>
+			<version>${jettison.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>stax</groupId>
+					<artifactId>stax-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- jibx-run-1.2.jar https://mvnrepository.com/artifact/org.jibx/jibx-run -->
+		<dependency>
+			<groupId>org.jibx</groupId>
+			<artifactId>jibx-run</artifactId>
+			<version>${jibx.run.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.codehaus.woodstox</groupId>
+					<artifactId>wstx-asl</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- jsr311-api-1.1.1.jar https://mvnrepository.com/artifact/javax.ws.rs/jsr311-api -->
+		<dependency>
+			<groupId>javax.ws.rs</groupId>
+			<artifactId>jsr311-api</artifactId>
+			<version>${jsr311.api.version}</version>
+		</dependency>
+
+		<!-- juli-6.0.53.jar https://mvnrepository.com/artifact/org.apache.tomcat/juli -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>juli</artifactId>
+			<version>${juli.version}</version>
+		</dependency>
+
+		<!-- log4j-1.2.15.jar https://mvnrepository.com/artifact/log4j/log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.sun.jmx</groupId>
+					<artifactId>jmxri</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jdmk</groupId>
+					<artifactId>jmxtools</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>javax.jms</groupId>
+					<artifactId>jms</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- mail-1.4.jar https://mvnrepository.com/artifact/javax.mail/mail -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>${mail.version}</version>
+		</dependency>
+
+		<!-- mex-1.7.9-impl.jar private jar neethi-3.0.3.jar https://mvnrepository.com/artifact/org.apache.neethi/neethi -->
+		<dependency>
+			<groupId>org.apache.neethi</groupId>
+			<artifactId>neethi</artifactId>
+			<version>${neethi.version}</version>
+		</dependency>
+
+		<!-- stax2-api-3.1.1.jar https://mvnrepository.com/artifact/org.codehaus.woodstox/stax2-api -->
+		<dependency>
+			<groupId>org.codehaus.woodstox</groupId>
+			<artifactId>stax2-api</artifactId>
+			<version>${stax2.api.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.xml.stream</groupId>
+					<artifactId>stax-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- taglibs-standard-impl-1.2.5.jar https://mvnrepository.com/artifact/org.apache.taglibs/taglibs-standard-impl -->
+		<dependency>
+			<groupId>org.apache.taglibs</groupId>
+			<artifactId>taglibs-standard-impl</artifactId>
+			<version>${org.apache.taglibs.version}</version>
+		</dependency>
+
+		<!-- taglibs-standard-spec-1.2.5.jar https://mvnrepository.com/artifact/org.apache.taglibs/taglibs-standard-impl -->
+		<dependency>
+			<groupId>org.apache.taglibs</groupId>
+			<artifactId>taglibs-standard-spec</artifactId>
+			<version>${org.apache.taglibs.version}</version>
+		</dependency>
+
+		<!-- tribes-6.0.53.jar https://mvnrepository.com/artifact/org.apache.tomcat/tribes -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tribes</artifactId>
+			<version>${tribes.version}</version>
+		</dependency>
+
+		<!-- woden-core-1.0M10.jar https://mvnrepository.com/artifact/org.apache.woden/woden-core -->
+		<dependency>
+			<groupId>org.apache.woden</groupId>
+			<artifactId>woden-core</artifactId>
+			<version>${woden.core.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.xml.stream</groupId>
+					<artifactId>stax-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- woodstox-core-asl-4.2.0.jar https://mvnrepository.com/artifact/org.codehaus.woodstox/woodstox-core-asl -->
+		<dependency>
+			<groupId>org.codehaus.woodstox</groupId>
+			<artifactId>woodstox-core-asl</artifactId>
+			<version>${woodstox.core.asl.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.xml.stream</groupId>
+					<artifactId>stax-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- wsdl4j-1.6.2.jar https://mvnrepository.com/artifact/wsdl4j/wsdl4j -->
+		<dependency>
+			<groupId>wsdl4j</groupId>
+			<artifactId>wsdl4j</artifactId>
+		</dependency>
+
+		<!-- xalan-2.7.0.jar https://mvnrepository.com/artifact/xalan/xalan -->
+		<dependency>
+			<groupId>xalan</groupId>
+			<artifactId>xalan</artifactId>
+			<version>${xalan.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>xml-apis</groupId>
+					<artifactId>xml-apis</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- xmlbeans-2.6.0.jar https://mvnrepository.com/artifact/org.apache.xmlbeans/xmlbeans -->
+		<dependency>
+			<groupId>org.apache.xmlbeans</groupId>
+			<artifactId>xmlbeans</artifactId>
+			<version>${xmlbeans.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>stax</groupId>
+					<artifactId>stax-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- xml-resolver-1.2.jar https://mvnrepository.com/artifact/xml-resolver/xml-resolver -->
+		<dependency>
+			<groupId>xml-resolver</groupId>
+			<artifactId>xml-resolver</artifactId>
+			<version>${xml.resolver.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.ws.xmlschema</groupId>
+					<artifactId>xmlschema-core</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- xmlschema-core-2.2.1.jar https://mvnrepository.com/artifact/org.apache.ws.xmlschema/xmlschema-core -->
+		<dependency>
+			<groupId>org.apache.ws.xmlschema</groupId>
+			<artifactId>xmlschema-core</artifactId>
+			<version>${xmlschema.core.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>*</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 	</dependencies>
 
+	<dependencyManagement>
+		<!-- 解决版本冲突 -->
+		<dependencies>
+			<dependency>
+				<groupId>antlr</groupId>
+				<artifactId>antlr</artifactId>
+				<version>2.7.7</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.xml.bind</groupId>
+				<artifactId>jaxb-api</artifactId>
+				<version>2.2.6</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-codec</groupId>
+				<artifactId>commons-codec</artifactId>
+				<version>1.2</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.code.gson</groupId>
+				<artifactId>gson</artifactId>
+				<version>2.8.5</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpclient</artifactId>
+				<version>4.5.3</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpcore</artifactId>
+				<version>4.4.6</version>
+			</dependency>
+			<dependency>
+				<groupId>wsdl4j</groupId>
+				<artifactId>wsdl4j</artifactId>
+				<version>1.6.2</version>
+			</dependency>
+			<dependency>
+				<groupId>jaxen</groupId>
+				<artifactId>jaxen</artifactId>
+				<version>1.1.6</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<!-- config -->
+	<properties>
+		<java.version>1.8</java.version>
+		<antlr2.version>2.7.7</antlr2.version>
+		<activation.version>1.1</activation.version>
+		<axis2.version>1.7.9</axis2.version>
+		<axiom.version>1.2.21</axiom.version>
+		<apache.mime4j.core.version>0.7.2</apache.mime4j.core.version>
+		<commons.fileupload.version>1.3.3</commons.fileupload.version>
+		<commons.httpclient.version>3.1</commons.httpclient.version>
+		<commons.io.version>2.1</commons.io.version>
+		<xmlschema.core.version>2.2.1</xmlschema.core.version>
+		<xml.resolver.version>1.2</xml.resolver.version>
+		<xmlbeans.version>2.6.0</xmlbeans.version>
+		<xalan.version>2.7.0</xalan.version>
+		<woodstox.core.asl.version>4.2.0</woodstox.core.asl.version>
+		<woden.core.version>1.0M10</woden.core.version>
+		<tribes.version>6.0.53</tribes.version>
+		<org.apache.taglibs.version>1.2.5</org.apache.taglibs.version>
+		<stax2.api.version>3.1.1</stax2.api.version>
+		<neethi.version>3.0.3</neethi.version>
+		<mail.version>1.4</mail.version>
+		<log4j.version>1.2.15</log4j.version>
+		<juli.version>6.0.53</juli.version>
+		<jsr311.api.version>1.1.1</jsr311.api.version>
+		<jibx.run.version>1.2</jibx.run.version>
+		<jettison.version>1.3.8</jettison.version>
+		<geronimo.ws.metadata.2.0.spec.version>1.1.2</geronimo.ws.metadata.2.0.spec.version>
+		<com.sun.xml.bind.version>2.2.6</com.sun.xml.bind.version>
+		<org.apache.geronimo.specs.version>1.0.1</org.apache.geronimo.specs.version>
+		<geronimo.jta.1.1.spec.version>1.1</geronimo.jta.1.1.spec.version>
+		<geronimo.jaxws.2.2.spec.version>1.0</geronimo.jaxws.2.2.spec.version>
+		<geronimo.annotation.1.0.spec.version>1.1</geronimo.annotation.1.0.spec.version>
+		<commons.logging.version>1.1.1</commons.logging.version>
+	</properties>
+	<!-- Build Config -->
 	<build>
 		<plugins>
 			<plugin>
@@ -67,5 +760,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
