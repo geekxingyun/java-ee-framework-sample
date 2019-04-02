@@ -1,7 +1,11 @@
 
 大家好，我是该项目维护者：星云
 
-当前更新时间：2019-01-27 17:16
+当前更新时间：2019-04-02 17:16
+
+>最近新开了一个仓库，致力于Spring Boot 2.x 最佳实践，
+>该仓库专门针对Spring Boot 集成各种技术的，欢迎关注~
+>仓库地址：https://github.com/geekxingyun/SpringBootBestPracticesSample
 
 这个仓库是关于JavaEE 框架的案例代码合集,可供大家参考学习~
 
