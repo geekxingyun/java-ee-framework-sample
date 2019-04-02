@@ -34,8 +34,6 @@ Struts2-Sample    | Struts2 案例源码
 
 # 关于我
 
-[星云个人主页](http://www.520geek.cn)
-
 [星云CSDN博客](https://blog.csdn.net/hadues)
 
 [星云博客园](http://www.cnblogs.com/xingyunblog)
@@ -43,6 +41,8 @@ Struts2-Sample    | Struts2 案例源码
 [星云阿里云栖博客](https://yq.aliyun.com/u/xingyunsky)
 
 [星云GitHub](https://github.com/geekxingyun)
+
+[星云GitHub Page](http://www.520geek.cn)
 
 [星云微博](https://weibo.com/xingyunsky)
 
