@@ -135,3 +135,5 @@ public class MainTest {
 >  // 你的应用逻辑代码
 >}
 >```
+
+关于该项目工程更多详细介绍,参考我的CSDN博文[MyBatis入门学习教程](https://xingyun.blog.csdn.net/article/details/98463266)
