@@ -63,6 +63,4 @@ Struts2-Sample    | Struts2 案例源码
 
 <h2>微信赞赏二维码</h2>
 <p><img src="https://img2018.cnblogs.com/blog/622489/201812/622489-20181215164147325-217176189.png" alt="" width="303" height="282"></p>
-<h2>支付宝赞赏二维码</h2>
-<p><img src="https://img2018.cnblogs.com/blog/622489/201812/622489-20181215164420863-364321980.png" alt="" width="297" height="303"></p>
 
