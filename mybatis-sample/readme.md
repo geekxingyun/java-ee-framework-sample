@@ -4,4 +4,4 @@
 
 |项目名称|博文讲解|
 |--|--|
-| learningmybatisxmlsample | [MyBatis入门学习教程](https://xingyun.blog.csdn.net/article/details/98463266) |
+| [learningmybatisxmlsample](https://github.com/geekxingyun/JavaEE-Framework-Sample/tree/master/mybatis-sample/learningmybatisxmlsample) | [MyBatis入门学习教程](https://xingyun.blog.csdn.net/article/details/98463266) |
