@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--    在 properties 元素体内指定的属性首先被读取。-->
+    <!--    然后根据 properties 元素中的 resource 属性读取类路径下属性文件或根据 url 属性指定的路径读取属性文件，并覆盖已读取的同名属性。-->
+    <!--    最后读取作为方法参数传递的属性，并覆盖已读取的同名属性。-->
+    <!--加载外部的config.properties 配置文件-->
+    <properties resource="config/config.properties">
+        <!--如果config.properties中没有配置username和password那么就使用这里的配置-->
+        <property name="username" value="sa"/>
+        <property name="password" value="sa"/>
+        <!-- 方式二写法必须添加如下配置启用默认值特性 -->
+        <property name="org.apache.ibatis.parsing.PropertyParser.enable-default-value" value="true"/>
+        <!-- 方式三写法必须添加如下配置修改默认值的分隔符-->
+<!--        <property name="org.apache.ibatis.parsing.PropertyParser.default-value-separator" value="?:"/>-->
+    </properties>
+
+    <!--更多配置详情,参考 http://www.mybatis.org/mybatis-3/zh/configuration.html#settings-->
+    <settings>
+        <!--全局地开启或关闭配置文件中的所有映射器已经配置的任何缓存。默认值 true-->
+        <setting name="cacheEnabled" value="true"/>
+        <!-- 延迟加载的全局开关。当开启时，所有关联对象都会延迟加载。
+        特定关联关系中可通过设置 fetchType 属性来覆盖该项的开关状态。
+        默认值 false-->
+        <setting name="lazyLoadingEnabled" value="false"/>
+        <!--当开启时，任何方法的调用都会加载该对象的所有属性。 否则，每个属性会按需加载（参考 lazyLoadTriggerMethods)。-->
+        <setting name="aggressiveLazyLoading" value="false"/>
+        <!--是否允许单一语句返回多结果集（需要驱动支持）-->
+        <setting name="multipleResultSetsEnabled" value="true"/>
+        <!--使用列标签代替列名。不同的驱动在这方面会有不同的表现，具体可参考相关驱动文档或通过测试这两种不同的模式来观察所用驱动的结果。-->
+        <setting name="useColumnLabel" value="true"/>
+        <!--允许 JDBC 支持自动生成主键，需要驱动支持。 如果设置为 true 则这个设置强制使用自动生成主键，尽管一些驱动不能支持但仍可正常工作（比如 Derby）。-->
+        <setting name="useGeneratedKeys" value="false"/>
+        <!--指定 MyBatis 应如何自动映射列到字段或属性。 -->
+        <!--NONE 表示取消自动映射；-->
+        <!--PARTIAL 只会自动映射没有定义嵌套结果集映射的结果集。 -->
+        <!--FULL 会自动映射任意复杂的结果集（无论是否嵌套）。-->
+        <setting name="autoMappingBehavior" value="PARTIAL"/>
+        <!--
+        指定发现自动映射目标未知列（或者未知属性类型）的行为。
+        NONE: 不做任何反应,默认值
+        WARNING: 输出提醒日志 ('org.apache.ibatis.session.AutoMappingUnknownColumnBehavior' 的日志等级必须设置为 WARN)
+        FAILING: 映射失败 (抛出 SqlSessionException)-->
+        <setting name="autoMappingUnknownColumnBehavior" value="NONE"/>
+        <!--
+        配置默认的执行器。
+        SIMPLE 就是普通的执行器；
+        REUSE 执行器会重用预处理语句（prepared statements）；
+        BATCH 执行器将重用语句并执行批量更新。-->
+        <setting name="defaultExecutorType" value="SIMPLE"/>
+        <!--设置超时时间，它决定驱动等待数据库响应的秒数。默认值null-->
+        <setting name="defaultStatementTimeout" value="25"/>
+        <!--为驱动的结果集获取数量（fetchSize）设置一个提示值。此参数只可以在查询设置中被覆盖默认值null-->
+        <setting name="defaultFetchSize" value="100"/>
+        <!--允许在嵌套语句中使用分页（RowBounds）。如果允许使用则设置为 false-->
+        <setting name="safeRowBoundsEnabled" value="false"/>
+        <!--允许在嵌套语句中使用分页（ResultHandler）。如果允许使用则设置为 false-->
+        <setting name="safeResultHandlerEnabled" value="false"/>
+        <!--是否开启自动驼峰命名规则（camel case）映射，即从经典数据库列名 A_COLUMN 到经典 Java 属性名 aColumn 的类似映射。-->
+        <setting name="mapUnderscoreToCamelCase" value="false"/>
+        <!--
+        MyBatis 利用本地缓存机制（Local Cache）防止循环引用（circular references）和加速重复嵌套查询。
+        默认值为 SESSION，这种情况下会缓存一个会话中执行的所有查询。
+        若设置值为 STATEMENT，本地会话仅用在语句执行上，对相同 SqlSession 的不同调用将不会共享数据。-->
+        <setting name="localCacheScope" value="SESSION"/>
+        <!--当没有为参数提供特定的 JDBC 类型时，为空值指定 JDBC 类型。
+        某些驱动需要指定列的 JDBC 类型，多数情况直接用一般类型即可，比如 NULL、VARCHAR 或 OTHER。-->
+        <setting name="jdbcTypeForNull" value="OTHER"/>
+        <!--指定哪个对象的方法触发一次延迟加载。-->
+        <setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/>
+    </settings>
+
+    <!--配置别名-->
+    <!--配置详情:http://www.mybatis.org/mybatis-3/zh/configuration.html#typeAliases-->
+    <typeAliases>
+        <typeAlias alias="UserInfo" type="com.xingyun.model.UserInfo"/>
+        <!--也可以指定一个包名，MyBatis 会在包名下面搜索需要的 Java Bean-->
+        <!--每一个在包 domain.blog 中的 Java Bean，在没有注解的情况下，会使用 Bean 的首字母小写的非限定类名来作为它的别名-->
+<!--        <package name="com.xingyun.model"/>-->
+    </typeAliases>
+
+    <!--配置自定义类型处理器-->
+    <!--配置详情:http://www.mybatis.org/mybatis-3/zh/configuration.html#typeHandlers -->
+   <!-- <typeHandlers>
+        <typeHandler handler="org.mybatis.example.ExampleTypeHandler"/>
+        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="java.math.RoundingMode"/>
+    </typeHandlers>-->
+
+    <!--指定默认启用开发环境-->
+    <!--默认使用的环境 ID-->
+    <environments default="development">
+        <!--开发环境-->
+        <environment id="development">
+            <!--事务管理器的配置 type="[JDBC|MANAGED]" 这两种事务管理器类型都不需要设置任何属性-->
+            <transactionManager type="JDBC"/>
+            <!--如果你正在使用 Spring + MyBatis，则没有必要配置事务管理器， 因为 Spring 模块会使用自带的管理器来覆盖前面的配置-->
+            <!--数据源的配置 有三种内建的数据源类型 type="[UNPOOLED|POOLED|JNDI]"-->
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+               <!-- 这是数据库的 JDBC URL 地址。-->
+                <property name="url" value="${url}"/>
+                <!--方式一:-->
+<!--                <property name="username" value="${username}"/>-->
+<!--                <property name="password" value="${password}"/>-->
+                <!--方式二:从 MyBatis 3.4.2 开始，你可以为占位符指定一个默认值-->
+                <property name="username" value="${username:root}"/>
+                <property name="password" value="${password:toor}"/>
+                <!--方式三:-->
+<!--                <property name="username" value="${db:username?:ut_user}"/>-->
+<!--                <property name="password" value="${db:password?:toor}"/>-->
+            </dataSource>
+        </environment>
+        <!--生产环境-->
+        <environment id="prod">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--这些配置会告诉了 MyBatis 去哪里找映射文件 -->
+    <mappers>
+         <!-- 使用相对于类路径的资源引用 -->
+         <!-- 最新版本测试发现,*Mapper.xml文件不可以放入多层级文件夹下 -->
+         <!--单个配置 -->
+         <mapper resource="mapper/UserInfoMapper.xml"/>
+         <!-- 最新版本测试发现,*Mapper.xml如下配置会报错 -->
+         <!--模糊匹配配置 -->
+         <!-- <mapper resource="mapper/*Mapper.xml"/>-->
+
+          <!-- 使用完全限定资源定位符（URL） -->
+          <!--<mapper url="file:///var/mappers/AuthorMapper.xml"/>-->
+
+        <!-- 使用映射器接口实现类的完全限定类名 -->
+        <!--<mapper class="org.mybatis.builder.AuthorMapper"/>-->
+
+        <!-- 将包内的映射器接口实现全部注册为映射器 -->
+        <!-- <package name="org.mybatis.builder"/>-->
+    </mappers>
+</configuration>
