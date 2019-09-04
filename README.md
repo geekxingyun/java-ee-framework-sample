@@ -35,29 +35,6 @@ Struts2-Sample    | Struts2 案例源码
 > 交流即分享，分享才能进步！不对之处，还请各位前辈多多指教。  by 星云
 
 ---
-# 关于我
-
-[星云CSDN博客](https://blog.csdn.net/hadues)
-
-[星云博客园](http://www.cnblogs.com/xingyunblog)
-
-[星云阿里云栖博客](https://yq.aliyun.com/u/xingyunsky)
-
-[星云GitHub](https://github.com/geekxingyun)
-
-[星云GitHub Page](http://www.520geek.cn)
-
-[星云微博](https://weibo.com/xingyunsky)
-
-# 免费加入我的知识星球
-
-<p><a href="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/my_world.png?raw=true"> <img src="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/my_world.png?raw=true" width="253" height="340"><a><p>
-
-# 联系我
-
-> QQ：2864438285　
-> 
-> Email：fairy_xingyun@hotmail.com   
 
 # 赞助支持
 
