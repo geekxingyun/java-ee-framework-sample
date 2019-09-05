@@ -2,9 +2,15 @@ package com.xingyun.interfaces;
 
 import com.xingyun.model.User;
 
-/***
- * �û��ӿ�
- * ****/
+/**
+ * @author 星云
+ * @Description 用户服务接口层
+ * @Date 9/5/2019 8:09 AM
+ */
 public interface IUser {
-	public void insert(User user);
+	/**
+	 * Insert User Interface
+	 * @param user
+	 */
+	void insertUser(User user);
 }
