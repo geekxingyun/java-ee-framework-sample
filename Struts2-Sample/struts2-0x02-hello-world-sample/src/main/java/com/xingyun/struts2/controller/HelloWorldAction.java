@@ -1,4 +1,4 @@
-package com.xingyun.struts2.action;
+package com.xingyun.struts2.controller;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.xingyun.struts2.model.MessageStore;
