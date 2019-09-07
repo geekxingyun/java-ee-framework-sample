@@ -209,3 +209,4 @@ mvn jetty:run
 
 ## 参考资料
 - [How To Create A Struts 2 Web Application](https://struts.apache.org/getting-started/how-to-create-a-struts2-web-application.html)
+- [官方 Struts2 examples](https://github.com/apache/struts-examples)
