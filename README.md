@@ -6,13 +6,7 @@
 
 > 交流即分享，分享才能进步！不对之处，还请各位前辈多多指教。  by 星云
 
-# 公告说明
-
-- 2019年9月7日 
-
->最近新开了一个仓库，致力于Spring Boot 2.x 最佳实践，该仓库专门针对Spring Boot 集成各种技术的，欢迎关注~
->仓库地址：https://github.com/geekxingyun/SpringBootBestPracticesSample
-
+# 案例学习仓库目录概览
 
 项目源码名称 |项目简介 
 ---|---
