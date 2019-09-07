@@ -6,7 +6,7 @@
 
     <!--设置本项目的groupId artifactId 和版本信息-->
     <groupId>com.xingyun.struts2</groupId>
-    <artifactId>struts2-0x01-hello-world-sample</artifactId>
+    <artifactId>struts2-0x01-basic-struts-sample</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
@@ -48,7 +48,7 @@
     </dependencies>
 
     <build>
-        <finalName>struts2-0x01-hello-world-sample</finalName>
+        <finalName>basic_struts_sample</finalName>
         <!-- 定义项目的名称 -->
         <!-- 定义插件 -->
         <plugins>
