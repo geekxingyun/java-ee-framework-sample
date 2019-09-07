@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <!--设置本项目的groupId artifactId 和版本信息-->
+  <groupId>com.xingyun</groupId>
+  <artifactId>CodeFactoryPatternSample</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <description>直接编码实现工厂模式</description>
+
+  <properties>
+    <!-- 设置项目所使用的编码为UTF-8 -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!--设置项目所用JDK版本,也可以使用低版本，建议使用JDK1.8以上版本-->
+    <java.version>12</java.version>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+    <maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
+    <!--是否跳过测试-->
+    <skipTests>true</skipTests>
+    <!--设置项目使用第三方依赖包，建议以后都采用这种方式，统一在一个地方声明版本号，这样对项目可以统一管理，方便以后升级-->
+    <lombok.version>1.18.8</lombok.version>
+  </properties>
+
+  <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>${lombok.version}</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <!--该插件限定Maven 打包时所使用的版本,避免出现版本不匹配问题-->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${maven.compiler.plugin.version}</version>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
