@@ -22,7 +22,7 @@
         <!--是否跳过测试-->
         <skipTests>true</skipTests>
         <!--设置项目使用第三方依赖包，建议以后都采用这种方式，统一在一个地方声明版本号，这样对项目可以统一管理，方便以后升级-->
-        <jetty.maven.plugin.version>9.4.7.v20170914</jetty.maven.plugin.version>
+        <jetty.maven.plugin.version>9.4.20.v20190813</jetty.maven.plugin.version>
         <struts2.version>2.5.20</struts2.version>
         <log4j2.version>2.12.1</log4j2.version>
     </properties>
