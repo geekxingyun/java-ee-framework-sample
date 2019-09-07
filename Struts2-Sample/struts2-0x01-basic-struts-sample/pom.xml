@@ -52,6 +52,7 @@
         <!-- 定义项目的名称 -->
         <!-- 定义插件 -->
         <plugins>
+            <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-maven-plugin -->
             <!--定义这个插件允许我们使用mvn jetty:run命令运行我们当前这个项目-->
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
