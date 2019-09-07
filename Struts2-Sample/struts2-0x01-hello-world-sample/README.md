@@ -1,4 +1,4 @@
-# Struts2 学习案例源码库
+# struts2-0x01-hello-world-sample
 ## 1.1 Struts 2 使用须知
 如果想使用Struts2,必须满足如下条件:
 - Servlet API 2.4 +
