@@ -245,7 +245,7 @@ pom.xml 根目录输入maven命令如下
 ```
 mvn jetty:run
 ```
-8.访问我们的页面
+10.访问我们的页面
 
 [http://127.0.0.1:8080/hello_world_sample/](http://127.0.0.1:8080/hello_world_sample/)
 
