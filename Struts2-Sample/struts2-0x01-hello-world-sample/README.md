@@ -197,6 +197,8 @@ log4j2.xml
 </Configuration>
 ```
 7.启动我们的应用程序
+
+pom.xml 根目录输入maven命令如下
 ```
 mvn jetty:run
 ```
