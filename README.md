@@ -1,14 +1,18 @@
+# 仓库说明
 
-大家好，我是该项目维护者：星云
-
->最近新开了一个仓库，致力于Spring Boot 2.x 最佳实践，
->该仓库专门针对Spring Boot 集成各种技术的，欢迎关注~
->
->仓库地址：https://github.com/geekxingyun/SpringBootBestPracticesSample
-
-这个仓库是关于JavaEE 框架的案例代码合集,可供大家参考学习~
+大家好，我是该项目维护者星云，这个仓库是关于JavaEE 后端相关框架的案例源码合集,可供大家参考学习~
 
 如果你有什么想学的技术，可以提一个issue,有时间后我会写好Demo 给你放上去。
+
+> 交流即分享，分享才能进步！不对之处，还请各位前辈多多指教。  by 星云
+
+# 公告说明
+
+- 2019年9月7日 
+
+>最近新开了一个仓库，致力于Spring Boot 2.x 最佳实践，该仓库专门针对Spring Boot 集成各种技术的，欢迎关注~
+>仓库地址：https://github.com/geekxingyun/SpringBootBestPracticesSample
+
 
 项目源码名称 |项目简介 
 ---|---
@@ -30,8 +34,6 @@ SpringMVC-Sample  | Spring MVC 案例源码
 Struts2-Sample    | Struts2 案例源码
 [spring-boot-axis2-sample](https://github.com/geekxingyun/JavaEE-Framework-Sample/tree/master/SpringBoot-Sample/spring-boot-axis2-sample)| Spring Boot 2.x 整合Axis2 1.7.9案例源码
 |[SpringBootBestPracticesSample](https://github.com/geekxingyun/SpringBootBestPracticesSample)|[Spring Boot 最佳实践博客专栏](https://xingyun.blog.csdn.net/article/category/9284593)|
-
-> 交流即分享，分享才能进步！不对之处，还请各位前辈多多指教。  by 星云
 
 ---
 
