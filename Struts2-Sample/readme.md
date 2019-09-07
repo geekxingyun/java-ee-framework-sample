@@ -1,6 +1,12 @@
-# 文件夹说明
+# Strus2 Framework 学习仓库
 
 关于Struts2 技术相关的所有案例源码,可供大家学习研究使用.
+
+# 官方资料
+
+- [Apache Struts2](https://struts.apache.org/)
+
+- [Apache Struts2 Sample](https://github.com/apache/struts-examples)
 
 # 目录说明
 
