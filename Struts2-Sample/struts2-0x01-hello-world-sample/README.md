@@ -59,8 +59,9 @@ pom.xml 配置如下:
      </dependencies>
  
      <build>
+         <!-- 定义项目上下文名称,如果不设置默认就是struts2-0x01-hello-world-sample-1.0-SNAPSHOT -->
          <finalName>struts2-0x01-hello-world-sample</finalName>
-         <!-- 定义项目的名称 -->
+         
          <!-- 定义插件 -->
          <plugins>
              <!--定义这个插件允许我们使用mvn jetty:run命令运行我们当前这个项目-->
