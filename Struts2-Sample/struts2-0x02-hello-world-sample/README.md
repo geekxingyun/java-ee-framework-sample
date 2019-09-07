@@ -239,6 +239,16 @@ public class HelloWorldAction extends ActionSupport {
 </body>
 </html>
 ```
+9.启动我们的应用程序
+
+pom.xml 根目录输入maven命令如下
+```
+mvn jetty:run
+```
+10.访问我们的页面
+
+[http://127.0.0.1:8080/hello_world_sample/](http://127.0.0.1:8080/hello_world_sample/)
+
 # 参考链接
 - [Hello World Using Struts 2](https://struts.apache.org/getting-started/hello-world-using-struts2.html)
 - [官方 Struts2 examples](https://github.com/apache/struts-examples)

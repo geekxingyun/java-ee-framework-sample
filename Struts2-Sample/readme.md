@@ -6,4 +6,5 @@
 
 |项目名称|项目说明|
 |--|--|
-|[struts2-0x01-basic-struts-sample](https://github.com/geekxingyun/JavaEE-Framework-Sample/tree/master/Struts2-Sample/struts2-0x01-basic-struts-sample)|如何创建一个Struts 2 web应用程序|
+|[struts2-0x01-basic-struts-sample](https://github.com/geekxingyun/JavaEE-Framework-Sample/tree/master/Struts2-Sample/struts2-0x01-basic-struts-sample)|如何创建一个基础最精简的Struts 2 web应用程序|
+|[struts2-0x02-hello-world-sample](https://github.com/geekxingyun/JavaEE-Framework-Sample/tree/master/Struts2-Sample/struts2-0x02-hello-world-sample)|一个标准的使用Struts2开发的Web应用程序|
