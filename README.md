@@ -28,6 +28,7 @@ SpringMVC-Sample  | Spring MVC 案例源码
 Struts2-Sample    | Struts2 案例源码
 [spring-boot-axis2-sample](https://github.com/geekxingyun/JavaEE-Framework-Sample/tree/master/SpringBoot-Sample/spring-boot-axis2-sample)| Spring Boot 2.x 整合Axis2 1.7.9案例源码
 |[SpringBootBestPracticesSample](https://github.com/geekxingyun/SpringBootBestPracticesSample)|[Spring Boot 最佳实践博客专栏](https://xingyun.blog.csdn.net/article/category/9284593)|
+|[SpringCloudBestPracticesSample](https://github.com/geekxingyun/SpringCloudBestPracticesSample)|Spring Cloud构建分布式应用程序学习仓库|
 
 ---
 
