@@ -32,8 +32,27 @@ Struts2-Sample    | Struts2 案例源码
 
 ---
 
-# 赞助支持
+# 关于我
 
-<h2>微信赞赏二维码</h2>
-<p><img src="https://img2018.cnblogs.com/blog/622489/201812/622489-20181215164147325-217176189.png" alt="" width="303" height="282"></p>
+> 交流即分享，分享才能进步！ by 星云
+
+
+[星云CSDN博客](https://blog.csdn.net/hadues)
+
+[星云GitHub](https://github.com/geekxingyun)
+
+[星云微博](https://weibo.com/xingyunsky)
+
+# 关注与打赏
+
+<div align="center">
+ <a href="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/follow-me-and-award-me.png">
+ <img src="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/follow-me-and-award-me.png">
+ </img>
+  </a>
+</div>
+
+# 联系我
+
+Email: fairy_xingyun@hotmail.com
 
