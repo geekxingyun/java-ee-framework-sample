@@ -26,14 +26,15 @@
 |SpringBoot-Sample | Spring Boot 案例源码|
 |SpringMVC-Sample  | Spring MVC 案例源码|
 [spring-boot-axis2-sample](https://github.com/geekxingyun/JavaEE-Framework-Sample/tree/master/SpringBoot-Sample/spring-boot-axis2-sample)| Spring Boot 2.x 整合Axis2 1.7.9案例源码|
-|Strust2-sample|[Struts2源码案例精选](https://github.com/geekxingyun/struts2-sample)|
+|[strust2-sample](https://github.com/geekxingyun/struts2-sample)|Struts2 案例源码精选|
 
 # 专栏精选
 
-|专栏源码分类| 专栏源码博文讲解带视频 |
-|--|--|
-|  [Spring Boot 2.x 最佳实践专栏源码](https://github.com/geekxingyun/spring-boot-best-practices-sample) | [Spring  Boot 2.x 最佳实践专栏](https://xingyun.blog.csdn.net/category_9284593.html)  |
-|  [微服务架构开发实战专栏源码](https://github.com/geekxingyun/spring-cloud-best-practices-sample)| [微服务架构开发实战专栏](https://xingyun.blog.csdn.net/category_9814450.html)|
+|专栏转码分类| 专栏源码博文列表| 专栏简介|
+|--|--|--|
+|  [Spring Boot 2.x 最佳实践专栏源码](https://github.com/geekxingyun/spring-boot-best-practices-sample) | [Spring  Boot 2.x 最佳实践专栏](https://xingyun.blog.csdn.net/category_9284593.html)  |[Spring Boot 2.x 最佳实践专栏简介](https://xingyun.blog.csdn.net/article/details/103041834)|
+|  [微服务架构开发实战专栏源码](https://github.com/geekxingyun/spring-cloud-best-practices-sample)| [微服务架构开发实战专栏](https://xingyun.blog.csdn.net/category_9814450.html)|微服务架构开发实战专栏简介|
+
 
 ---
 
