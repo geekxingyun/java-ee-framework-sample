@@ -26,7 +26,7 @@
 |SpringBoot-Sample | Spring Boot 案例源码|
 |SpringMVC-Sample  | Spring MVC 案例源码|
 [spring-boot-axis2-sample](https://github.com/geekxingyun/JavaEE-Framework-Sample/tree/master/SpringBoot-Sample/spring-boot-axis2-sample)| Spring Boot 2.x 整合Axis2 1.7.9案例源码|
-|Strust2-sample|[Struts2-sample](https://github.com/geekxingyun/struts2-sample)|
+|Strust2-sample|[Struts2源码案例精选](https://github.com/geekxingyun/struts2-sample)|
 
 # 专栏精选
 
