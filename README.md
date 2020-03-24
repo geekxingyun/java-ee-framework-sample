@@ -11,8 +11,8 @@
 |项目名称| 项目简介|
 |--|--|
 | JavaDesignPatternSample | Java 设计模式案例源码精选 |
-| LuceneSample| Lucene 搜索案例源码精选|
-| MavenSample| Maven 项目基本模版案例源码精选|
+| LuceneSample| Lucene 案例源码精选|
+| MavenSample| Maven项目基本模版案例源码精选|
 |RabbitMQSample|RabbitMQ案例源码精选|
 |Spring-Build-Restful-Web-Service-Sample|Spring 创建一个Web Service 案例源码|
 |Spring-Consume-Restful-Web-Service-Sample|Spring 消费一个Web Service 案例源码|
