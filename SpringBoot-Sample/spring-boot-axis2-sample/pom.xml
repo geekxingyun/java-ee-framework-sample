@@ -576,7 +576,7 @@
 			<groupId>org.apache.taglibs</groupId>
 			<artifactId>taglibs-standard-spec</artifactId>
 			<version>${org.apache.taglibs.version}</version>
-		</dependency>
+		</dependency>ƒ
 
 		<!-- tribes-6.0.53.jar https://mvnrepository.com/artifact/org.apache.tomcat/tribes -->
 		<dependency>
@@ -738,7 +738,7 @@
 		<stax2.api.version>3.1.1</stax2.api.version>
 		<neethi.version>3.0.3</neethi.version>
 		<mail.version>1.4</mail.version>
-		<log4j.version>1.2.15</log4j.version>
+		<log4j.version>1.2.17</log4j.version>
 		<juli.version>6.0.53</juli.version>
 		<jsr311.api.version>1.1.1</jsr311.api.version>
 		<jibx.run.version>1.2</jibx.run.version>
