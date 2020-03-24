@@ -8,35 +8,9 @@
   <name>lucene-sample</name>
    
 	<properties>
+		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	
-	<build>
-	  <plugins>
-	      <plugin>
-	          <groupId>org.codehaus.mojo</groupId>
-	          <artifactId>exec-maven-plugin</artifactId>
-	          <version>1.3.2</version>
-	          <executions>
-	              <execution>
-	                  <id>ex</id>
-	                  <phase>package</phase>
-	                  <goals>
-	                      <goal>exec</goal>
-	                  </goals>
-	                  <configuration>
-	                      <executable>java</executable>
-	                      <arguments>
-	                          <argument>-classpath</argument>
-	                          <classpath />
-	                          <argument>HelloLucene.HelloLucene</argument>
-	                      </arguments>
-	                  </configuration>
-	              </execution>
-	          </executions>
-	      </plugin>
-	  </plugins>
-	</build>
 
 	<dependencies>
 		<dependency>
@@ -65,4 +39,31 @@
 			<version>7.1.0</version>
 		</dependency>
 	</dependencies>
+
+	<build>
+	  <plugins>
+	      <plugin>
+	          <groupId>org.codehaus.mojo</groupId>
+	          <artifactId>exec-maven-plugin</artifactId>
+	          <version>1.3.2</version>
+	          <executions>
+	              <execution>
+	                  <id>ex</id>
+	                  <phase>package</phase>
+	                  <goals>
+	                      <goal>exec</goal>
+	                  </goals>
+	                  <configuration>
+	                      <executable>java</executable>
+	                      <arguments>
+	                          <argument>-classpath</argument>
+	                          <classpath />
+	                          <argument>HelloLucene.HelloLucene</argument>
+	                      </arguments>
+	                  </configuration>
+	              </execution>
+	          </executions>
+	      </plugin>
+	  </plugins>
+	</build>
 </project>
