@@ -576,10 +576,10 @@
 			<groupId>org.apache.taglibs</groupId>
 			<artifactId>taglibs-standard-spec</artifactId>
 			<version>${org.apache.taglibs.version}</version>
-		</dependency>ƒ
+		</dependency>
 
 		<!-- tribes-6.0.53.jar https://mvnrepository.com/artifact/org.apache.tomcat/tribes -->
-		<dependency>
+        <dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tribes</artifactId>
 			<version>${tribes.version}</version>
