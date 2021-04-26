@@ -734,7 +734,7 @@
         <apache.mime4j.core.version>0.7.2</apache.mime4j.core.version>
         <commons.fileupload.version>1.3.3</commons.fileupload.version>
         <commons.httpclient.version>3.1</commons.httpclient.version>
-        <commons.io.version>2.1</commons.io.version>
+        <commons.io.version>2.7</commons.io.version>
         <xmlschema.core.version>2.2.1</xmlschema.core.version>
         <xml.resolver.version>1.2</xml.resolver.version>
         <xmlbeans.version>2.6.0</xmlbeans.version>
