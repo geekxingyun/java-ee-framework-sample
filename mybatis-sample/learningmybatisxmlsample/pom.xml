@@ -21,7 +21,7 @@
         <skipTests>true</skipTests>
         <!--设置项目使用第三方依赖包，建议以后都采用这种方式，统一在一个地方声明版本号，这样对项目可以统一管理，方便以后升级-->
         <mybatis.version>3.5.2</mybatis.version>
-        <h2.version>1.4.199</h2.version>
+        <h2.version>2.0.206</h2.version>
         <lombok.version>1.18.8</lombok.version>
     </properties>
 
