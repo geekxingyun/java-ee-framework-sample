@@ -738,7 +738,7 @@
         <xmlschema.core.version>2.2.1</xmlschema.core.version>
         <xml.resolver.version>1.2</xml.resolver.version>
         <xmlbeans.version>2.6.0</xmlbeans.version>
-        <xalan.version>2.7.0</xalan.version>
+        <xalan.version>2.7.2</xalan.version>
         <woodstox.core.asl.version>4.2.0</woodstox.core.asl.version>
         <woden.core.version>1.0M10</woden.core.version>
         <tribes.version>6.0.53</tribes.version>
