@@ -750,7 +750,7 @@
         <juli.version>6.0.53</juli.version>
         <jsr311.api.version>1.1.1</jsr311.api.version>
         <jibx.run.version>1.2</jibx.run.version>
-        <jettison.version>1.3.8</jettison.version>
+        <jettison.version>1.5.2</jettison.version>
         <geronimo.ws.metadata.2.0.spec.version>1.1.2</geronimo.ws.metadata.2.0.spec.version>
         <com.sun.xml.bind.version>2.2.6</com.sun.xml.bind.version>
         <org.apache.geronimo.specs.version>1.0.1</org.apache.geronimo.specs.version>
